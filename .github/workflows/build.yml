@@ -61,10 +61,10 @@ jobs:
         file: dev/build/Dockerfile
         push: true
         tags: |
-          requarks/wiki:canary
-          requarks/wiki:canary-${{ env.REL_VERSION_STRICT }}
-          ghcr.io/requarks/wiki:canary
-          ghcr.io/requarks/wiki:canary-${{ env.REL_VERSION_STRICT }}
+          peanutsplash/wiki:canary
+          peanutsplash/wiki:canary-${{ env.REL_VERSION_STRICT }}
+          ghcr.io/peanutsplash/wiki:canary
+          ghcr.io/peanutsplash/wiki:canary-${{ env.REL_VERSION_STRICT }}
 
     - name: Extract compiled files
       run: |
