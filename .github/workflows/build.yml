@@ -265,12 +265,12 @@ jobs:
 
     - name: Create and Push Manifests
       run: |
-        echo "Fetching semver tool..."
-        curl -LJO https://static.peanutsplash.io/semver
-        chmod +x semver
-
-        MAJOR=`./semver get major $REL_VERSION_STRICT`
-        MINOR=`./semver get minor $REL_VERSION_STRICT`
+        # 使用bash字符串处理来获取版本号
+        VERSION_WITHOUT_V=${REL_VERSION_STRICT}
+        
+        # 使用cut命令分割版本号
+        MAJOR=$(echo $VERSION_WITHOUT_V | cut -d. -f1)
+        MINOR=$(echo $VERSION_WITHOUT_V | cut -d. -f2)
         MAJORMINOR="$MAJOR.$MINOR"
 
         echo "Using major $MAJOR and minor $MINOR..."
