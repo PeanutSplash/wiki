@@ -722,7 +722,6 @@ export default {
     &-logo {
       width: 258px;
       height: 58px;
-      background-color: #222;
       margin-left: 12px;
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;
